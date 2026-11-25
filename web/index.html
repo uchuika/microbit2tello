@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ドローン ブロックプログラミング</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="workspace"></div>
+  <aside id="side">
+    <h1>🚁 ドローン ブロック</h1>
+
+    <button id="stop" title="スペースキー / Esc">🛑 とまる<small>（ちゃくりく）</small></button>
+    <button id="send">▶ ドローンに おくる</button>
+    <div id="dirty" hidden>⚠ ブロックを かえたよ。「おくる」を おしてね</div>
+
+    <section id="status">
+      <span class="chip" id="chip-conn">つなぎちゅう…</span>
+      <span class="chip" id="chip-fly">ちじょう</span>
+      <span class="chip" id="chip-bat">バッテリー --</span>
+      <span class="chip" id="chip-dry" hidden>れんしゅう (とばない)</span>
+    </section>
+    <div id="message"></div>
+
+    <section>
+      <h2>いま おしているもの</h2>
+      <div id="pressed"></div>
+    </section>
+
+    <section id="virtual" hidden>
+      <h2>がめんの コントローラー</h2>
+      <div class="pad">
+        <button class="vbtn red" data-k="red">あか</button>
+        <button class="vbtn green" data-k="green">みどり</button>
+        <button class="vbtn blue" data-k="blue">あお</button>
+      </div>
+      <div class="stick">
+        <button class="vstick" data-s="fwd">▲</button>
+        <button class="vstick" data-s="left">◀</button>
+        <button class="vstick" data-s="right">▶</button>
+        <button class="vstick" data-s="back">▼</button>
+      </div>
+    </section>
+
+    <section class="tools">
+      <button id="reset">はじめの ブロックに もどす</button>
+      <button id="save-file">ファイルに ほぞん</button>
+      <button id="load-file">ファイルから ひらく</button>
+      <input type="file" id="file-input" accept=".json,application/json" hidden>
+    </section>
+  </aside>
+</div>
+<script src="vendor/blockly/blockly_compressed.js"></script>
+<script src="vendor/blockly/msg/ja.js"></script>
+<script src="blocks.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

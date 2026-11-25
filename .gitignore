@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv-build/
+
+# Build outputs (PyInstaller / Inno Setup)
+build/
+dist/
+*.spec
+*.hex
+
+# Runtime user data
+programs/current.json
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Tool-local settings
+.claude/settings.local.json
+.serena/

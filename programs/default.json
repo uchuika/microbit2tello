@@ -1,0 +1,21 @@
+{
+  "workspace": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {"type": "ev_hold", "id": "def_h1", "x": 30, "y": 30, "fields": {"INPUT": "green"},
+         "inputs": {"BODY": {"block": {"type": "d_drive", "id": "def_d1", "fields": {"DIR": "up", "SPEED": 40}}}}},
+        {"type": "ev_hold", "id": "def_h2", "x": 30, "y": 150, "fields": {"INPUT": "blue"},
+         "inputs": {"BODY": {"block": {"type": "d_drive", "id": "def_d2", "fields": {"DIR": "down", "SPEED": 40}}}}},
+        {"type": "ev_stick", "id": "def_s1", "x": 30, "y": 270, "fields": {"SPEED": 60}}
+      ]
+    }
+  },
+  "program": {
+    "events": [
+      {"kind": "hold", "input": "green", "moves": [{"op": "drive", "dir": "up", "speed": 40}]},
+      {"kind": "hold", "input": "blue", "moves": [{"op": "drive", "dir": "down", "speed": 40}]},
+      {"kind": "stick_drive", "speed": 60}
+    ]
+  }
+}
